@@ -150,6 +150,18 @@ def handler(event: dict, context) -> dict:
                 user = cur.fetchone()
                 
                 if user:
+                    cur.execute(
+                        "SELECT COUNT(*) FROM follows WHERE follower_id = %s",
+                        (user_id,)
+                    )
+                    following_count = cur.fetchone()[0]
+                    
+                    cur.execute(
+                        "SELECT COUNT(*) FROM follows WHERE following_id = %s",
+                        (user_id,)
+                    )
+                    followers_count = cur.fetchone()[0]
+                    
                     return {
                         'statusCode': 200,
                         'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
@@ -160,7 +172,9 @@ def handler(event: dict, context) -> dict:
                             'avatar_url': user[3],
                             'bio': user[4],
                             'is_admin': user[5],
-                            'is_banned': user[6]
+                            'is_banned': user[6],
+                            'followers_count': followers_count,
+                            'following_count': following_count
                         }),
                         'isBase64Encoded': False
                     }
