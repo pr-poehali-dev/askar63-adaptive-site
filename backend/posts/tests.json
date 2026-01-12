@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Get posts feed",
+      "method": "GET",
+      "path": "/?action=feed",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "posts": "array"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

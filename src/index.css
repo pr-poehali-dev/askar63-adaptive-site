@@ -6,44 +6,44 @@
 
 @layer base {
   :root {
-    --background: 218 23% 12%;
-    --foreground: 0 0% 98%;
+    --background: 210 11% 15%;
+    --foreground: 0 0% 95%;
 
-    --card: 222 20% 15%;
-    --card-foreground: 0 0% 98%;
+    --card: 210 11% 18%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 222 20% 15%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 210 11% 18%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 280 85% 65%;
+    --primary: 142 70% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 266 75% 48%;
+    --secondary: 142 40% 35%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 222 20% 20%;
-    --muted-foreground: 215 15% 70%;
+    --muted: 210 11% 25%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 199 89% 48%;
+    --accent: 142 70% 45%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 222 20% 25%;
-    --input: 222 20% 20%;
-    --ring: 280 85% 65%;
+    --border: 210 11% 25%;
+    --input: 210 11% 22%;
+    --ring: 142 70% 45%;
 
-    --radius: 1rem;
+    --radius: 0.5rem;
 
-    --sidebar-background: 218 23% 10%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 280 85% 65%;
+    --sidebar-background: 210 11% 12%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 142 70% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 222 20% 18%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 222 20% 20%;
-    --sidebar-ring: 280 85% 65%;
+    --sidebar-accent: 210 11% 20%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 210 11% 20%;
+    --sidebar-ring: 142 70% 45%;
   }
 }
 
@@ -74,19 +74,31 @@
 
 @layer utilities {
   .gradient-primary {
-    background: linear-gradient(135deg, #d946ef 0%, #8b5cf6 50%, #0ea5e9 100%);
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
   }
 
   .gradient-text {
-    background: linear-gradient(135deg, #d946ef 0%, #8b5cf6 50%, #0ea5e9 100%);
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .blur-card {
-    background: rgba(34, 34, 42, 0.6);
+    background: rgba(30, 35, 40, 0.8);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+  }
+
+  .whatsapp-bg {
+    background: #0b141a;
+  }
+
+  .chat-bubble-received {
+    background: #1f2c33;
+  }
+
+  .chat-bubble-sent {
+    background: #005c4b;
   }
 }

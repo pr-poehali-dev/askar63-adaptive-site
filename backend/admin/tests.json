@@ -1,0 +1,15 @@
+{
+  "tests": [
+    {
+      "name": "Get admin stats",
+      "method": "GET",
+      "path": "/?action=stats",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "users_count": "number",
+        "posts_count": "number"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
